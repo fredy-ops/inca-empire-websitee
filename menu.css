@@ -1,0 +1,28 @@
+.menu .lang {
+  margin-left: auto;
+  margin-right: 20px;
+}
+nav.menu {
+  display: flex;
+  align-items: center;
+  background-color: #2e7d32;
+  padding: 10px 20px;
+}
+
+nav.menu img {
+  height: 50px;
+}
+nav.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav.menu li {
+  margin-left: 20px;
+}
+nav.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
