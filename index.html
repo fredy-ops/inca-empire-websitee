@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>start - Adventure in the Inca Empire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="menu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .vertical-img {
+      width: 100%;
+      max-height: 800px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .imagen-vertical {
+      text-align: center;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header {
+      background: url('machupicchu.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 24px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .benefits, .gallery, .testimonials {
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits li::before {
+      content: "✔️ ";
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 30%;
+      margin: 1%;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+    .testimonials blockquote {
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    .map {
+      text-align: center;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+  </style>
+  <script>
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll('[data-es], [data-en], [data-fr], [data-cn]');
+      elements.forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <nav class="menu">
+    <img src="logo.png" alt="Logo" style="height: 50px; margin-right: 15px;">
+    <ul>
+      <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil" data-cn="主页">Inicio</a></li>
+      <li><a href="tours.html" data-es="Tours" data-en="Tours" data-fr="Excursions" data-cn="旅游">Tours</a></li>
+      <li><a href="about.html" data-es="Nosotros" data-en="About Us" data-fr="À propos" data-cn="关于我们">Nosotros</a></li>
+      <li><a href="faq.html" data-es="FAQ" data-en="FAQ" data-fr="FAQ" data-cn="常见问题">FAQ</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-en="Contact" data-fr="Contact" data-cn="联系我们">Contacto</a></li>
+      <li class="lang">
+        <a href="#" onclick="changeLanguage('es')">ES</a> |
+        <a href="#" onclick="changeLanguage('en')">EN</a> |
+        <a href="#" onclick="changeLanguage('fr')">FR</a> |
+        <a href="#" onclick="changeLanguage('cn')">中</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1 data-es="Conociendo el Imperio Inca" data-en="Discovering the Inca Empire" data-fr="Découvrir l'Empire Inca" data-cn="探索印加帝国">Conociendo el Imperio Inca</h1>
+    <p data-es="Explora Perú con guías locales certificados" data-en="Explore Peru with certified local guides" data-fr="Explorez le Pérou avec des guides locaux certifiés" data-cn="与认证的当地导游一起探索秘鲁">Explora Perú con guías locales certificados</p>
+  </header>
+
+  <section class="benefits">
+    <h2 data-es="¿Por qué elegirnos?" data-en="Why choose us?" data-fr="Pourquoi nous choisir ?" data-cn="为什么选择我们？">¿Por qué elegirnos?</h2>
+    <ul>
+      <li data-es="Guías locales con experiencia" data-en="Experienced local guides" data-fr="Guides locaux expérimentés" data-cn="经验丰富的当地导游">Guías locales con experiencia</li>
+      <li data-es="Grupos pequeños y atención personalizada" data-en="Small groups and personalized attention" data-fr="Petits groupes et attention personnalisée" data-cn="小团体和个性化服务">Grupos pequeños y atención personalizada</li>
+      <li data-es="Alimentación, transporte y equipo incluidos" data-en="Meals, transportation, and equipment included" data-fr="Repas, transport et équipement inclus" data-cn="包含膳食、交通和设备">Alimentación, transporte y equipo incluidos</li>
+      <li data-es="Soporte 24/7 durante tu viaje" data-en="24/7 support during your trip" data-fr="Assistance 24/7 pendant votre voyage" data-cn="旅行期间全天候支持">Soporte 24/7 durante tu viaje</li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h2 data-es="Galería de Aventuras" data-en="Adventure Gallery" data-fr="Galerie d'aventures" data-cn="冒险画廊">Galería de Aventuras</h2>
+    <img src="machu1.jpg" alt="Machu Picchu">
+    <img src="salkantay.jpg" alt="Salkantay">
+    <img src="lares.jpg" alt="Lares Trek">
+    <img src="machupicchu.jpg" alt="Vista panorámica de Machu Picchu">
+  </section>
+
+  <section class="imagen-vertical">
+    <img src="vertical.jpg" alt="Foto destacada" class="vertical-img">
+  </section>
+
+  <section class="testimonials">
+    <h2 data-es="Testimonios" data-en="Testimonials" data-fr="Témoignages" data-cn="客户评价">Testimonios</h2>
+    <blockquote data-es="Una experiencia inolvidable con paisajes increíbles y excelente organización" data-en="An unforgettable experience with amazing landscapes and excellent organization" data-fr="Une expérience inoubliable avec des paysages incroyables et une excellente organisation" data-cn="一次难忘的经历，风景如画，组织有序">"Una experiencia inolvidable con paisajes increíbles y excelente organización" — Anna, Alemania</blockquote>
+    <blockquote data-es="Recomiendo 100% esta agencia, ¡el guía fue espectacular!" data-en="I 100% recommend this agency, the guide was amazing!" data-fr="Je recommande cette agence à 100%, le guide était spectaculaire !" data-cn="我强烈推荐这家机构，导游非常棒！">"Recomiendo 100% esta agencia, ¡el guía fue espectacular!" — Luis, México</blockquote>
+  </section>
+
+  <section class="map">
+    <h2 data-es="Encuéntranos en Cusco" data-en="Find us in Cusco" data-fr="Trouvez-nous à Cusco" data-cn="在库斯科找到我们">Encuéntranos en Cusco</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.0380825323611!2d-71.97722106690046!3d-13.517088731898875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd112d455ed3f%3A0x3cb4b9618681a7f5!2sPlaza%20de%20Armas%2C%20Cusco%2008002%2C%20Per%C3%BA!5e0!3m2!1ses-419!2spe!4v1652918592321!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/5191604428" target="_blank" 
+     data-es="¡Contáctanos por WhatsApp!" data-en="Contact us on WhatsApp!" 
+     data-fr="Contactez-nous sur WhatsApp !" data-cn="通过 WhatsApp 联系我们！">💬 WhatsApp</a>
+
+  <footer>
+    <p>&copy; 2025 Adventure in the Inca Empire</p>
+  </footer>
+
+</body>
+</html>
